@@ -144,6 +144,7 @@
         }
       }
 
+      alert("Login Successful - EduTrack System");
       writeSession({ email, role });
       window.location.href = "dashboard.html";
     });
