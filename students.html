@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EduTrack — Students</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="students">
+    <header class="topbar">
+      <div class="topbar__inner">
+        <a class="topbar__brand" href="dashboard.html" aria-label="EduTrack Dashboard">
+          <span class="topbar__logo" aria-hidden="true">E</span>
+          <span>EduTrack</span>
+        </a>
+        <nav class="topbar__nav" aria-label="Primary">
+          <a class="nav__link" href="dashboard.html">Dashboard</a>
+          <a class="nav__link nav__link--active" href="students.html">Students</a>
+          <button id="logoutBtn" class="btn btn--ghost btn--sm" type="button">Logout</button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="panel">
+        <div class="panel__head">
+          <div>
+            <h1 class="panel__title" id="studentsTitle">Students</h1>
+            <p class="panel__subtitle" id="studentsSubtitle">
+              Add students and view the student list (saved in localStorage).
+            </p>
+          </div>
+          <span class="badge" id="roleBadge">Role</span>
+        </div>
+
+        <div id="adminOnly" class="panel__section">
+          <h2 class="section__title">Student Registration (Sprint-1)</h2>
+          <form id="studentForm" class="form form--inline" novalidate>
+            <div class="form__row">
+              <label class="label" for="studentName">Student Name</label>
+              <input
+                class="input"
+                id="studentName"
+                name="studentName"
+                type="text"
+                placeholder="e.g., Ayesha Khan"
+                required
+              />
+            </div>
+            <div class="form__row">
+              <label class="label" for="rollNumber">Roll Number</label>
+              <input
+                class="input"
+                id="rollNumber"
+                name="rollNumber"
+                type="text"
+                placeholder="e.g., CS-23-101"
+                required
+              />
+            </div>
+            <button class="btn btn--primary" type="submit">Add Student</button>
+          </form>
+          <p class="note">
+            Tip: Data persists after refresh because it’s stored in <code>localStorage</code>.
+          </p>
+        </div>
+
+        <div id="studentViewOnly" class="panel__section panel__section--hidden">
+          <div class="notice">
+            <div class="notice__title">View-only mode</div>
+            <div class="notice__text">
+              As a Student, you can view the list but cannot add new students in this prototype.
+            </div>
+          </div>
+        </div>
+
+        <div class="panel__section">
+          <h2 class="section__title">Student List</h2>
+          <div id="studentsEmpty" class="empty">
+            No students yet. (Admin can add students to populate this list.)
+          </div>
+          <div class="tablewrap">
+            <table class="table" aria-label="Students">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Name</th>
+                  <th>Roll Number</th>
+                </tr>
+              </thead>
+              <tbody id="studentsTbody"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

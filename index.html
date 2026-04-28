@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EduTrack — Login</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="login">
+    <div class="page page--center">
+      <main class="card card--auth">
+        <header class="card__header">
+          <div class="brand">
+            <div class="brand__logo" aria-hidden="true">E</div>
+            <div>
+              <h1 class="brand__title">EduTrack</h1>
+              <p class="brand__subtitle">Student Management System (Sprint-1 Prototype)</p>
+            </div>
+          </div>
+        </header>
+
+        <form id="loginForm" class="form" autocomplete="on" novalidate>
+          <div class="form__row">
+            <label class="label" for="email">Email</label>
+            <input
+              class="input"
+              id="email"
+              name="email"
+              type="email"
+              inputmode="email"
+              placeholder="you@university.edu"
+              required
+            />
+          </div>
+
+          <div class="form__row">
+            <label class="label" for="password">Password</label>
+            <input
+              class="input"
+              id="password"
+              name="password"
+              type="password"
+              placeholder="Enter password"
+              required
+            />
+          </div>
+
+          <div class="form__row">
+            <label class="label" for="role">Role</label>
+            <select class="input" id="role" name="role" required>
+              <option value="Admin">Admin</option>
+              <option value="Student">Student</option>
+            </select>
+          </div>
+
+          <button class="btn btn--primary" type="submit">Login</button>
+
+          <div class="hint">
+            <p class="hint__title">Demo Credentials</p>
+            <p class="hint__line"><strong>Admin</strong>: admin@edu.pk / 123</p>
+            <p class="hint__line">
+              <strong>Student</strong>: any email / any password (role-based view only)
+            </p>
+          </div>
+        </form>
+      </main>
+      <footer class="footer">© <span id="year"></span> EduTrack</footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

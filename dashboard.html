@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EduTrack — Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="dashboard">
+    <header class="topbar">
+      <div class="topbar__inner">
+        <a class="topbar__brand" href="dashboard.html" aria-label="EduTrack Dashboard">
+          <span class="topbar__logo" aria-hidden="true">E</span>
+          <span>EduTrack</span>
+        </a>
+        <nav class="topbar__nav" aria-label="Primary">
+          <a class="nav__link" href="dashboard.html">Dashboard</a>
+          <a id="studentsLink" class="nav__link" href="students.html">Students</a>
+          <button id="logoutBtn" class="btn btn--ghost btn--sm" type="button">Logout</button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="panel">
+        <h1 class="panel__title" id="welcomeTitle">Welcome</h1>
+        <p class="panel__subtitle" id="welcomeSubtitle">
+          This is your Sprint-1 dashboard (Authentication + Student Registration).
+        </p>
+
+        <div class="grid">
+          <a id="studentsCard" class="cardlink" href="students.html">
+            <div class="cardlink__title" id="studentsCardTitle">Students</div>
+            <div class="cardlink__desc" id="studentsCardDesc">
+              Add students and view the student list.
+            </div>
+          </a>
+
+          <div class="cardlink cardlink--muted">
+            <div class="cardlink__title">Sprint-1 Scope</div>
+            <div class="cardlink__desc">
+              - User Authentication<br />
+              - Student Registration (localStorage)
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
