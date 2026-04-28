@@ -171,6 +171,8 @@
     }
 
     if (session.role === "Admin") {
+      // ES1-2: Role-Based Access implemented
+      console.log("Admin has full access to manage students");
       if (studentsLink) studentsLink.textContent = "Manage Students";
       if (studentsCardTitle) studentsCardTitle.textContent = "Manage Students";
       if (studentsCardDesc)
