@@ -171,6 +171,8 @@
     }
 
     if (session.role === "Admin") {
+      // ES1-2: Role-Based Access implemented
+      console.log("Admin has full access to manage students");
       if (studentsLink) studentsLink.textContent = "Manage Students";
       if (studentsCardTitle) studentsCardTitle.textContent = "Manage Students";
       if (studentsCardDesc)
@@ -219,6 +221,9 @@
 
       const updated = readStudents();
       updated.push({ name, roll });
+      // ES1-3: Student Registration feature
+      // ES1-3 Student Registration feature (separate commit)
+console.log("Student registration handled");
       writeStudents(updated);
       renderStudentsTable(updated);
 
